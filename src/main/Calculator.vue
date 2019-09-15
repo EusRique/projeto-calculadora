@@ -79,6 +79,12 @@ export default {
             this.displayValue = displayValue
             this.clearDisplay = false
             this.values[this.current] = displayValue
+
+            // if (n !== ".") {
+            //     const i = this.current
+            //     const newValue = parseFloat(displayValue)
+            //     this.values[i] = newValue
+            // }
         }
     }
 
