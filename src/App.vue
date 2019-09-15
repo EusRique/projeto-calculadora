@@ -1,29 +1,41 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+      <h1>Calculadora</h1>
+      <Calculator />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import Calculator from "./main/Calculator"
+
+export default {
+    components: { Calculator }
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+</script>
+
+<style>
+@font-face {
+    font-family: "RobotoMono";
+    src: url("./fonts/RobotoMono-Thin.ttf");
+}
+
+* {
+    font-family: "RobotoMono", monospace;
+}
+
+body {
+    margin: 0
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+    background: linear-gradient(to right, rgb(83, 105, 118), rgb(41, 46, 73));
 }
 </style>
